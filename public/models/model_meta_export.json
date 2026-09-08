@@ -1,0 +1,31 @@
+{
+  "pose_features": [
+    "left_knee",
+    "right_knee",
+    "left_hip",
+    "right_hip",
+    "knee_symmetry"
+  ],
+  "form_features": [
+    "left_knee",
+    "right_knee",
+    "left_hip",
+    "right_hip",
+    "knee_symmetry",
+    "hip_symmetry",
+    "trunk_lean",
+    "left_ankle_flex",
+    "right_ankle_flex",
+    "left_knee_forward",
+    "right_knee_forward"
+  ],
+  "pose_classes": [
+    "Squat",
+    "Standing",
+    "Transition"
+  ],
+  "form_classes": [
+    "Bad",
+    "Good"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "discover": "Discover",
+    "matches": "Matches",
+    "bookings": "Bookings",
+    "ai_pose": "AI Pose",
+    "profile": "Profile",
+    "sign_out": "Sign out",
+    "login": "Login",
+    "register": "Register",
+    "get_started": "Get started",
+    "about": "About",
+    "how_it_works": "How it works",
+    "features": "Features",
+    "find_your_trainer": "Find your trainer",
+    "im_a_trainer": "I'm a trainer",
+    "availability": "Availability",
+    "clients": "Clients",
+    "earnings": "Earnings",
+    "overview": "Overview",
+    "users": "Users",
+    "trainers": "Trainers",
+    "reviews": "Reviews",
+    "analytics": "Analytics"
+  },
+  "landing": {
+    "hero_title": "Train with the perfect coach.",
+    "hero_subtitle": "Fitder matches you with personal trainers nearby based on your goals, budget, and schedule — then helps you train better with real-time AI posture correction."
+  },
+  "auth": {
+    "welcome_back": "Welcome back!",
+    "welcome_to_fitder": "Welcome to Fitder",
+    "login_subtitle": "Log in to manage your training.",
+    "email": "Email",
+    "password": "Password",
+    "sign_in": "Sign in",
+    "new_here": "New here?",
+    "create_account": "Create an account",
+    "register_title": "Join Fitder",
+    "register_subtitle": "Choose your role to get started.",
+    "im_a_client": "I'm a Client",
+    "im_a_client_desc": "Find and book personal trainers.",
+    "im_a_coach": "I'm a Coach",
+    "im_a_coach_desc": "Manage clients and your schedule.",
+    "full_name": "Full name",
+    "sign_up": "Sign up",
+    "already_have_account": "Already have an account?"
+  }
+}

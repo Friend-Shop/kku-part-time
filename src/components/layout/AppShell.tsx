@@ -1,0 +1,14 @@
+import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
+import { Bell, Calendar, CalendarRange, LayoutDashboard, LogOut, Menu, PlusCircle, Sparkles, Store, Wallet, X } from "lucide-react";
+import { useState, type ReactNode } from "react";
+import { useAuth } from "@/hooks/use-auth";
+import { cn } from "@/lib/utils";
+import { Logo } from "@/components/layout/Logo";
+
+const studentNav = [["/student/dashboard", "แดชบอร์ด", LayoutDashboard], ["/student/recommended", "งานที่เหมาะกับคุณ", Sparkles], ["/student/schedule", "ตารางเรียน", Calendar], ["/student/calendar", "ตารางเรียนและงาน", CalendarRange], ["/student/money", "การเงิน", Wallet], ["/student/notifications", "การแจ้งเตือน", Bell]] as const;
+const employerNav = [["/employer/dashboard", "แดชบอร์ด", LayoutDashboard], ["/employer/stores", "ร้านของฉัน", Store], ["/employer/jobs", "จัดการงาน", PlusCircle]] as const;
+
+export function AppShell({ children }: { children: ReactNode }) {
+  const { user, role, signOut } = useAuth(); const nav = useNavigate(); const path = useRouterState({ select: s => s.location.pathname }); const [open, setOpen] = useState(false); const items = role === "student" ? studentNav : role === "employer" ? employerNav : [];
+  return <div className="flex min-h-screen bg-background"><aside className={cn("fixed inset-y-0 left-0 z-40 flex w-64 flex-col border-r border-sidebar-border bg-sidebar transition-transform lg:static lg:translate-x-0", open ? "translate-x-0" : "-translate-x-full")}><div className="flex h-16 items-center gap-2 border-b border-sidebar-border px-5"><Logo/><span className="font-display font-bold">KKU PART-TiME</span></div><nav className="flex-1 space-y-1 p-3">{items.map(([to,label,Icon])=><Link key={to} to={to as never} onClick={()=>setOpen(false)} className={cn("flex items-center gap-3 rounded-md px-3 py-2 text-sm", path === to ? "bg-primary font-bold text-primary-foreground" : "hover:bg-sidebar-accent")}><Icon className="h-4 w-4"/>{label}</Link>)}</nav><div className="border-t border-sidebar-border p-3"><p className="mb-2 truncate px-3 text-xs text-muted-foreground">{user?.email}</p><button onClick={async()=>{await signOut();nav({to:"/login"})}} className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-sidebar-accent"><LogOut className="h-4 w-4"/>ออกจากระบบ</button></div></aside>{open&&<div className="fixed inset-0 z-30 bg-black/50 lg:hidden" onClick={()=>setOpen(false)}/>}<div className="flex min-w-0 flex-1 flex-col"><header className="flex h-16 items-center border-b border-border px-4 lg:px-8"><button onClick={()=>setOpen(!open)} className="rounded p-2 lg:hidden">{open?<X/>:<Menu/>}</button><span className="hidden font-display text-sm text-muted-foreground lg:block">KKU PART-TiME</span></header><main className="flex-1 p-4 lg:p-8">{children}</main></div></div>;
+}
