@@ -9,32 +9,27 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RegisterRouteImport } from './routes/register'
-import { Route as LoginRouteImport } from './routes/login'
-import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as StudentTransactionsRouteImport } from './routes/student.transactions'
-import { Route as StudentScheduleRouteImport } from './routes/student.schedule'
-import { Route as StudentRecommendedRouteImport } from './routes/student.recommended'
-import { Route as StudentNotificationsRouteImport } from './routes/student.notifications'
-import { Route as StudentMoneyRouteImport } from './routes/student.money'
-import { Route as StudentEarningsRouteImport } from './routes/student.earnings'
-import { Route as StudentDashboardRouteImport } from './routes/student.dashboard'
-import { Route as StudentCalendarRouteImport } from './routes/student.calendar'
-import { Route as StudentBudgetsRouteImport } from './routes/student.budgets'
-import { Route as EmployerStoresRouteImport } from './routes/employer.stores'
-import { Route as EmployerJobsRouteImport } from './routes/employer.jobs'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as RegisterRouteImport } from './routes/register'
 import { Route as EmployerDashboardRouteImport } from './routes/employer.dashboard'
+import { Route as EmployerJobsRouteImport } from './routes/employer.jobs'
+import { Route as EmployerStoresRouteImport } from './routes/employer.stores'
+import { Route as StudentBudgetsRouteImport } from './routes/student.budgets'
+import { Route as StudentCalendarRouteImport } from './routes/student.calendar'
+import { Route as StudentDashboardRouteImport } from './routes/student.dashboard'
+import { Route as StudentEarningsRouteImport } from './routes/student.earnings'
+import { Route as StudentMoneyRouteImport } from './routes/student.money'
+import { Route as StudentNotificationsRouteImport } from './routes/student.notifications'
+import { Route as StudentRecommendedRouteImport } from './routes/student.recommended'
+import { Route as StudentScheduleRouteImport } from './routes/student.schedule'
+import { Route as StudentTransactionsRouteImport } from './routes/student.transactions'
 import { Route as StudentJobIdRouteImport } from './routes/student.job.$id'
 
-const RegisterRoute = RegisterRouteImport.update({
-  id: '/register',
-  path: '/register',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DashboardRoute = DashboardRouteImport.update({
@@ -42,59 +37,19 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StudentTransactionsRoute = StudentTransactionsRouteImport.update({
-  id: '/student/transactions',
-  path: '/student/transactions',
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StudentScheduleRoute = StudentScheduleRouteImport.update({
-  id: '/student/schedule',
-  path: '/student/schedule',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentRecommendedRoute = StudentRecommendedRouteImport.update({
-  id: '/student/recommended',
-  path: '/student/recommended',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentNotificationsRoute = StudentNotificationsRouteImport.update({
-  id: '/student/notifications',
-  path: '/student/notifications',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentMoneyRoute = StudentMoneyRouteImport.update({
-  id: '/student/money',
-  path: '/student/money',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentEarningsRoute = StudentEarningsRouteImport.update({
-  id: '/student/earnings',
-  path: '/student/earnings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentDashboardRoute = StudentDashboardRouteImport.update({
-  id: '/student/dashboard',
-  path: '/student/dashboard',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentCalendarRoute = StudentCalendarRouteImport.update({
-  id: '/student/calendar',
-  path: '/student/calendar',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StudentBudgetsRoute = StudentBudgetsRouteImport.update({
-  id: '/student/budgets',
-  path: '/student/budgets',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmployerStoresRoute = EmployerStoresRouteImport.update({
-  id: '/employer/stores',
-  path: '/employer/stores',
+const EmployerDashboardRoute = EmployerDashboardRouteImport.update({
+  id: '/employer/dashboard',
+  path: '/employer/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EmployerJobsRoute = EmployerJobsRouteImport.update({
@@ -102,9 +57,54 @@ const EmployerJobsRoute = EmployerJobsRouteImport.update({
   path: '/employer/jobs',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EmployerDashboardRoute = EmployerDashboardRouteImport.update({
-  id: '/employer/dashboard',
-  path: '/employer/dashboard',
+const EmployerStoresRoute = EmployerStoresRouteImport.update({
+  id: '/employer/stores',
+  path: '/employer/stores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentBudgetsRoute = StudentBudgetsRouteImport.update({
+  id: '/student/budgets',
+  path: '/student/budgets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentCalendarRoute = StudentCalendarRouteImport.update({
+  id: '/student/calendar',
+  path: '/student/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentDashboardRoute = StudentDashboardRouteImport.update({
+  id: '/student/dashboard',
+  path: '/student/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentEarningsRoute = StudentEarningsRouteImport.update({
+  id: '/student/earnings',
+  path: '/student/earnings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentMoneyRoute = StudentMoneyRouteImport.update({
+  id: '/student/money',
+  path: '/student/money',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentNotificationsRoute = StudentNotificationsRouteImport.update({
+  id: '/student/notifications',
+  path: '/student/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentRecommendedRoute = StudentRecommendedRouteImport.update({
+  id: '/student/recommended',
+  path: '/student/recommended',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentScheduleRoute = StudentScheduleRouteImport.update({
+  id: '/student/schedule',
+  path: '/student/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentTransactionsRoute = StudentTransactionsRouteImport.update({
+  id: '/student/transactions',
+  path: '/student/transactions',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StudentJobIdRoute = StudentJobIdRouteImport.update({
@@ -253,18 +253,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/register': {
-      id: '/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dashboard': {
@@ -274,81 +267,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/student/transactions': {
-      id: '/student/transactions'
-      path: '/student/transactions'
-      fullPath: '/student/transactions'
-      preLoaderRoute: typeof StudentTransactionsRouteImport
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/student/schedule': {
-      id: '/student/schedule'
-      path: '/student/schedule'
-      fullPath: '/student/schedule'
-      preLoaderRoute: typeof StudentScheduleRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/recommended': {
-      id: '/student/recommended'
-      path: '/student/recommended'
-      fullPath: '/student/recommended'
-      preLoaderRoute: typeof StudentRecommendedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/notifications': {
-      id: '/student/notifications'
-      path: '/student/notifications'
-      fullPath: '/student/notifications'
-      preLoaderRoute: typeof StudentNotificationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/money': {
-      id: '/student/money'
-      path: '/student/money'
-      fullPath: '/student/money'
-      preLoaderRoute: typeof StudentMoneyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/earnings': {
-      id: '/student/earnings'
-      path: '/student/earnings'
-      fullPath: '/student/earnings'
-      preLoaderRoute: typeof StudentEarningsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/dashboard': {
-      id: '/student/dashboard'
-      path: '/student/dashboard'
-      fullPath: '/student/dashboard'
-      preLoaderRoute: typeof StudentDashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/calendar': {
-      id: '/student/calendar'
-      path: '/student/calendar'
-      fullPath: '/student/calendar'
-      preLoaderRoute: typeof StudentCalendarRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/student/budgets': {
-      id: '/student/budgets'
-      path: '/student/budgets'
-      fullPath: '/student/budgets'
-      preLoaderRoute: typeof StudentBudgetsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/employer/stores': {
-      id: '/employer/stores'
-      path: '/employer/stores'
-      fullPath: '/employer/stores'
-      preLoaderRoute: typeof EmployerStoresRouteImport
+    '/employer/dashboard': {
+      id: '/employer/dashboard'
+      path: '/employer/dashboard'
+      fullPath: '/employer/dashboard'
+      preLoaderRoute: typeof EmployerDashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/employer/jobs': {
@@ -358,11 +295,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmployerJobsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/employer/dashboard': {
-      id: '/employer/dashboard'
-      path: '/employer/dashboard'
-      fullPath: '/employer/dashboard'
-      preLoaderRoute: typeof EmployerDashboardRouteImport
+    '/employer/stores': {
+      id: '/employer/stores'
+      path: '/employer/stores'
+      fullPath: '/employer/stores'
+      preLoaderRoute: typeof EmployerStoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/budgets': {
+      id: '/student/budgets'
+      path: '/student/budgets'
+      fullPath: '/student/budgets'
+      preLoaderRoute: typeof StudentBudgetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/calendar': {
+      id: '/student/calendar'
+      path: '/student/calendar'
+      fullPath: '/student/calendar'
+      preLoaderRoute: typeof StudentCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/dashboard': {
+      id: '/student/dashboard'
+      path: '/student/dashboard'
+      fullPath: '/student/dashboard'
+      preLoaderRoute: typeof StudentDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/earnings': {
+      id: '/student/earnings'
+      path: '/student/earnings'
+      fullPath: '/student/earnings'
+      preLoaderRoute: typeof StudentEarningsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/money': {
+      id: '/student/money'
+      path: '/student/money'
+      fullPath: '/student/money'
+      preLoaderRoute: typeof StudentMoneyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/notifications': {
+      id: '/student/notifications'
+      path: '/student/notifications'
+      fullPath: '/student/notifications'
+      preLoaderRoute: typeof StudentNotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/recommended': {
+      id: '/student/recommended'
+      path: '/student/recommended'
+      fullPath: '/student/recommended'
+      preLoaderRoute: typeof StudentRecommendedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/schedule': {
+      id: '/student/schedule'
+      path: '/student/schedule'
+      fullPath: '/student/schedule'
+      preLoaderRoute: typeof StudentScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student/transactions': {
+      id: '/student/transactions'
+      path: '/student/transactions'
+      fullPath: '/student/transactions'
+      preLoaderRoute: typeof StudentTransactionsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/student/job/$id': {
